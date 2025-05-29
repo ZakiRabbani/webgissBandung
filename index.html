@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBGIS KOTA BANDUNG</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Landing Page WebGIS Kota Bandung</title> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+charset="utf-8"></script>
+<script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet Fullscreen Plugin CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.css" />
+
+<!-- Leaflet Locate Control CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header id="navbar"> 
+        <div class="container"> 
+            <div class="logo"> 
+                <img src="Asset/logo.png" alt="Logo" width="100"> 
+                <h1>WebGIS Kota Bandung</h1> 
+            </div> 
+            <nav> 
+                <ul> 
+                    <li><a href="#hero-section">Home</a></li> 
+                    <li><a href="#map-section">Map</a></li> 
+                    <li><a href="#data-section">Data</a></li> 
+                    <li><a href="#author-section">Author</a></li> 
+                    <li><a href="#footer">Contact</a></li> 
+                </ul> 
+            </nav> 
+        </div> 
+    </header>   
+    <!--hero section-->
+    <div id="hero-section" class="hero-section"> 
+        <div class="hero-content"> 
+            <h1>WebGIS Basis Data Spasial Kota Bandung</h1> 
+            <p>Halaman untuk Melakukan Eksplorasi Basis Data Spasial di Kota Bandung</p> 
+        </div> 
+    </div> 
+    <div id="map-section"> 
+        <h2>Jelajahi WebGIS Basis Data Spasial Kota Bandung</h2> 
+        <div id="map"> 
+            <!-- akan muncul peta disini --> 
+        </div> 
+    </div> 
+    <div id="data-section"> 
+        <h2>Data Tersedia</h2> 
+        <div class="container"> 
+            <div class="column"> 
+                <div class="data-item"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" alt="Image 1"> 
+                    <div class="description"> 
+                        <h3>Dark Side Of The Moon</h3> 
+                        <p>The Dark Side of the Moon is the eighth studio album by the English rock band Pink Floyd, released on 1 March 1973, by Capitol Records in the US and on 16 March 1973, by Harvest Records in the UK. Developed during live performances before recording began, it was conceived as a concept album that would focus on the pressures faced by the band during their arduous lifestyle, and also deal with the mental health problems of the former band member Syd Barrett, who had departed the group in 1968. New material was recorded in two sessions in 1972 and 1973 at EMI Studios (now Abbey Road Studios) in London.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="column"> 
+                <div class="data-item"> 
+                    <img src="https://s3.duellinksmeta.com/cards/60c2b3a9a0e24f2d54a5179e_w420.webp" alt="Image 1"> 
+                    <div class="description"> 
+                        <h3>Kebangkitan Deck Blue-eyes White Dragon</h3> 
+                        <p>Deck Blue-eyes white dragon kembali menjadi meta di master duel. Semenjak kemunculan kartu-kartu support
+                            baru bagi Blue-eyes, kini deck nya semakin kuat. Kartu Blue-eyes ultimate spirit dragomn merupakan salah satu
+                        kartu yang menjadi game changer bagi deck ini. kemunculan kartu lainnya seperti dominus purge dan kartu-kartu
+                        primite engine yang menjadi engine umum untuk deck naga semakin memperkuat deck ini.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="column"> 
+                <div class="data-item"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/67/Pepper%27s.jpg/500px-Pepper%27s.jpg" alt="Image 1"> 
+                    <div class="description"> 
+                        <h3>Album Yang Mengubah Dunia Musik</h3> 
+                        <p>Sgt. Pepper's Lonely Hearts Club Band merupakan album ke-8 band rock asal Inggris
+                            The Beatles. Dirilis pada tahun 1967, albumu ini memberikan nuansa baru pada musik kala itu.
+                            Album ini mengeksplorasi genre progresif-psychedelic hasil perjalanan anggota band dari India.
+                            Album ini menceritakan mengenai sebuah band alter-ego dari The Beatles yang bernama Sgt. Pepper's Lonely Hearts Club band.
+                        </p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>     
+    <div id="author-section"> 
+                <div class="author-content"> 
+                    <h2>Tentang Pembuat</h2> 
+                    <img src="asset/author-picture.jpeg" alt="Profile Picture" class="profile-picture"> 
+                    <div class="author-name"> 
+                        <h3>Soulburner</h3> 
+                    </div> 
+                    <p>Seorang Analis Sistem Informasi Geografis (SIG) dengan pengalaman 7 tahun dalam 
+        mengerjakan proyek dari pemerintah dan swasta baik dalam pekerjaan proyek maupun pelatihan SIG. 
+        Pekerja keras dan rajin dalam bekerja. Saat ini memiliki minat pada SIG, penginderaan jauh, 
+        WebGIS, dan SIG untuk mitigasi bencana dan termotivasi untuk terus belajar dan berkembang sebagai 
+        analis SIG.</p> 
+                </div> 
+            </div>
+            <div id="footer"> 
+                <div class="footer-content"> 
+                    <h3>Hubungi Saya</h3> 
+                    <p>Email: 123zakirabbani@upi.edu</p> 
+                    <p>Phone: +6226626262626</p> 
+                </div> 
+            </div>  
+            <!-- Leaflet JS -->
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+            <!-- Fullscreen Plugin JS -->
+            <script src="https://unpkg.com/leaflet.fullscreen/Control.FullScreen.js"></script>
+
+            <!-- Locate Control JS -->
+            <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+            
+            <script src="js\script.js"></script>
+
+
+</body>
+</html>
